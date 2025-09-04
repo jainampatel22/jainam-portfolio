@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 const ProfileCard = () => {
     return (
-<div className='h-auto min-h-56 lg:h-56 border-1 border-white/15 w-full rounded-xl'>
+<div className='h-auto min-h-52 lg:h-56 border-1 border-white/15 w-full rounded-xl'>
             <div className='text-sm font-[font2] text-[#656565] px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
                 <h1>hi there 😊, I&apos;m</h1>
             </div>
