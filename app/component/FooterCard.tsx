@@ -4,10 +4,10 @@ const FooterCard = () => {
   return (
     <div className='max-h-xl border-1  border-white/15 w-full rounded-xl'>
        <div>
-        <h1 className="text-center font-semibold font-[font2] text-3xl pt-8">Let's work together..</h1>
+        <h1 className="text-center font-semibold font-[font2] text-3xl pt-8">Let&apos;s work together..</h1>
       </div> 
       <div className='px-8 text-center text-[#D4D4D4]  font-[font2] text-sm pt-2'>
-        I'm always interested in new opportunities and exciting projects. Whether you have a project in mind or just want to chat about tech, I'd love to hear from you.
+        I&apos;m always interested in new opportunities and exciting projects. Whether you have a project in mind or just want to chat about tech, I&apos;d love to hear from you.
       </div>
       <div className='px-40 py-10'>
         <a href="mailto:pateljainams122@gmail.com" aria-label="Get in touch via email" data-slot="button" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive gap-1.5 has-[&gt;svg]:px-2.5 h-9 rounded-md bg-white px-4 text-black shadow-sm  dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"><span className="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-mail h-4 w-4"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span>Get in touch</span></span></a>

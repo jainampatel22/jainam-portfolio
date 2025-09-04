@@ -4,7 +4,7 @@ const ProfileCard = () => {
     return (
 <div className='h-auto min-h-56 lg:h-56 border-1 border-white/15 w-full rounded-xl'>
             <div className='text-sm font-[font2] text-[#656565] px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
-                <h1>hi there 😊, I'm</h1>
+                <h1>hi there 😊, I&apos;m</h1>
             </div>
             <div className='flex justify-start gap-2 sm:gap-3 items-start px-3 sm:px-4'>
                 <div className='bg-[#262626] w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex-shrink-0'>
