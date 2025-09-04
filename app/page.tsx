@@ -1,103 +1,82 @@
-import Image from "next/image";
+import React from 'react'
+import ProfileCard from './component/ProfileCard'
 
-export default function Home() {
+import { GeistMono } from 'geist/font/mono';
+import WorkCard from './component/WorkCard';
+import ProjectsCard from './component/ProjectsCard';
+import SkillsCard from './component/SkillsCard'
+import EducationCard from './component/EducationCard';
+import FooterCard from './component/FooterCard';
+import Link from 'next/link';
+
+const page = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className='max-h-xl w-full text-white'>
+      {/* Header - Responsive */}
+      <div className='px-4 sm:px-8 md:px-16 lg:px-[31%] p-8'>
+        <div className='flex justify-between items-center'>
+          <div className='font-[font2] mt-0.5 font-semibold text-sm cursor-pointer'>
+            Jainam 
+          </div>
+          
+          <div className='flex gap-2 sm:gap-4 text-[#FAFAFA] font-extralight font-[font2] text-xs sm:text-sm'>
+            <Link href='#experience'>
+              <div className='cursor-pointer'>experience</div>
+            </Link>
+            <Link href='#projects'>
+              <div className='cursor-pointer'>projects</div>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Main Content Card - Responsive */}
+      <div className='border-1 border-white/15 relative rounded-3xl -mt-2 h-full 
+                      w-[90%] mx-[5%] 
+                      sm:w-[80%] sm:mx-[10%] 
+                      md:w-[70%] md:mx-[15%] 
+                      lg:w-[60%] lg:mx-[20%] 
+                      xl:w-[40%] xl:mx-[30%]'>
+        
+        {/* Profile Section - Responsive padding */}
+        <div className='px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-9 lg:px-12 lg:py-10'>
+          <ProfileCard/>
+        </div>
+
+        {/* Description Section - Responsive padding and text */}
+        <div className='px-6 sm:px-8 md:px-12 lg:px-16 -mt-2'>
+          <div className={`font-[font2] text-sm sm:text-md text-[#D4D4D4]`}>
+            A 20 year-old developer from India who <span className='bg-[#FEF085] rounded px-1 sm:px-2 text-black'>loves</span> building <span className='bg-[#FEF085] rounded px-1 sm:px-2 text-black'>efficient, scalable, and intuitive</span> applications. Previously worked in freelance projects, I am currently working as a Full Stack Engineer Intern, gaining hands-on experience in building full stack applications. 
+          </div>
+        </div>
+
+        {/* Work Section - Responsive padding */}
+        <div className='px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-9 lg:px-14 lg:py-10'>
+          <WorkCard/>
+        </div>
+
+        {/* Projects Section - Responsive padding */}
+        <div className='px-6 py-3 sm:px-8 sm:py-3 md:px-12 md:py-4 lg:px-14 lg:py-4'>
+          <ProjectsCard/>
+        </div>
+
+        {/* Skills Section - Responsive padding */}
+        <div className='px-6 py-3 sm:px-8 sm:py-3 md:px-12 md:py-4 lg:px-14 lg:py-4'>
+          <SkillsCard/>
+        </div>
+
+        {/* Education Section - Responsive padding */}
+        <div className='px-6 py-3 sm:px-8 sm:py-3 md:px-12 md:py-4 lg:px-14 lg:py-4'>
+          <EducationCard/>
+        </div>
+
+        {/* Footer Section - Responsive padding */}
+        <div className='px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-7 lg:px-14 lg:py-8'>
+          <FooterCard/>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
+
+export default page
