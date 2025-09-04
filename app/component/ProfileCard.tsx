@@ -25,11 +25,11 @@ const ProfileCard = () => {
                     Full Stack Developer from India.
                 </div>
             </div>
-            <div className='flex flex-wrap px-3 sm:px-4 lg:px-5 items-start gap-3 sm:gap-4 lg:gap-5 text-xs sm:text-sm font-[font1] pt-3 sm:pt-4 pb-3 sm:pb-4'>
+            <div className='mt-3 -mb-5 flex flex-wrap px-3 sm:px-4 lg:px-5 items-start gap-3 sm:gap-4 lg:gap-5 text-xs sm:text-sm font-[font1] pt-3 sm:pt-4 sm:pb-4'>
                 <Button className='bg-white text-[#171717] font-semibold hover:bg-white cursor-pointer px-3 py-2 sm:px-4 sm:py-3 rounded-xl text-xs sm:text-sm'>
                     Resume
                 </Button>
-                <div className='py-1 sm:py-2'>
+                <div className='py-2 sm:py-2'>
                     <a href="mailto:pateljainams122@gmail.com" aria-label="Send email" data-slot="button" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground gap-1.5 has-[>svg]:px-2.5 h-5 w-5 sm:h-6 sm:w-6 rounded-sm border border-white/25 p-0 text-white hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-900">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-mail h-3 w-3 sm:h-4 sm:w-4">
                             <rect width="20" height="16" x="2" y="4" rx="2"></rect>
@@ -37,14 +37,14 @@ const ProfileCard = () => {
                         </svg>
                     </a>
                 </div>
-                <div className='py-1 sm:py-2'>
+                <div className='py-2 sm:py-2'>
                     <a href="https://x.com/Jainam___patel/" target="_blank" rel="noreferrer" aria-label="Open Twitter" data-slot="button" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground gap-1.5 has-[>svg]:px-2.5 h-5 w-5 sm:h-6 sm:w-6 rounded-sm border border-white/25 p-0 text-white hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-900">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-twitter h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
                         </svg>
                     </a>
                 </div>
-                <div className='py-1 sm:py-2'>
+                <div className='py-2 sm:py-2'>
                     <a href="https://github.com/jainampatel22" target="_blank" rel="noreferrer" aria-label="Open GitHub" data-slot="button" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground gap-1.5 has-[>svg]:px-2.5 h-5 w-5 sm:h-6 sm:w-6 rounded-sm border border-white/25 p-0 text-white hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-900">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-github h-3 w-3 sm:h-4 sm:w-4">
                             <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
@@ -52,7 +52,7 @@ const ProfileCard = () => {
                         </svg>
                     </a>
                 </div>
-                <div className='py-1 sm:py-2'>
+                <div className='py-2 sm:py-2'>
                     <a
                         href="https://www.linkedin.com/in/pateljainam/"
                         target="_blank"

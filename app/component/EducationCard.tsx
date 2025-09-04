@@ -11,7 +11,7 @@ const EducationCard = () => {
           <div className='flex  gap-32 items-start py-5 px-7'>
                     
                     <div className='text-[16px] font-[font2]  font-semibold capitalize whitespace-nowrap'>LJ university</div>
-                      <div className='text-sm  font-[font2] px-3 ml-14 py-1 whitespace-nowrap bg-[#171717] border border-white/15 rounded-full '>2023-2027</div>
+                      <div className='hidden sm:block text-sm  font-[font2] px-3 sm:ml-14 py-1 whitespace-nowrap bg-[#171717] border border-white/15 rounded-full '>2023-2027</div>
    
           </div>
           <div className='px-7 -mt-6'>
@@ -23,7 +23,7 @@ const EducationCard = () => {
           <div className='flex  gap-32 items-start py-5 px-7'>
                     
                     <div className='text-[16px] font-[font2]  font-semibold capitalize whitespace-nowrap'>DIVINE LIFE SCHOOL</div>
-                      <div className='text-sm  font-[font2] px-3   py-1 whitespace-nowrap bg-[#171717] border border-white/15 rounded-full '>2021-2023</div>
+                      <div className='hidden sm:block text-sm  font-[font2] px-3   py-1 whitespace-nowrap bg-[#171717] border border-white/15 rounded-full '>2021-2023</div>
    
           </div>
           <div className='px-7 -mt-6'>
