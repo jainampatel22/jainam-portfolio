@@ -43,11 +43,11 @@ const SkillsCard = () => {
           Skills
         </h1>
       </div>
-      <div className="px-3 sm:px-6 py-4 flex flex-wrap gap-2 sm:gap-3">
+      <div className="px-3 sm:px-6 py-4 flex flex-wrap gap-2 sm:gap-2">
         {orderedSkills.map((skill, index) => (
           <div
             key={index}
-            className="bg-[#0A0A0A] flex items-center gap-1 sm:gap-1 rounded-full px-1 sm:px-2 py-1 text-xs sm:text-sm md:text-base text-[#D4D4D4] border border-white/15 hover:bg-white/10 transition"
+            className="bg-[#0A0A0A] flex items-center gap-1 sm:gap-0.5 rounded-full px-1 sm:px-2 py-1 text-xs sm:text-sm md:text-base text-[#D4D4D4] border border-white/15 hover:bg-white/10 transition"
           >
             {skillLogos[skill] && (
               <img

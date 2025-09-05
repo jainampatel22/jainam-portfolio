@@ -10,9 +10,29 @@ import EducationCard from './component/EducationCard';
 import FooterCard from './component/FooterCard';
 import Link from 'next/link';
 import gsap from 'gsap';
+import {  ScrollToPlugin ,ScrollTrigger} from 'gsap/all';
+import Lenis from "@studio-freight/lenis";
 
 const page = () => {
   const ref = useRef(null)
+  gsap.registerPlugin(ScrollToPlugin)
+
+  useEffect(()=>{
+    const lenis = new Lenis({
+      duration: 3.5,     // 👈 longer duration = slower response
+    lerp: 0.05,        // 👈 small lerp keeps it smooth
+    wheelMultiplier: 0.6, // 👈 reduces scroll wheel speed
+    touchMultiplier: 0.6,
+
+    })
+  function raf(time:number){
+lenis.raf(time)
+requestAnimationFrame(raf)
+  }
+    requestAnimationFrame(raf);
+      lenis.on("scroll", ScrollTrigger.update);
+  
+  })
  useEffect(()=>{
   function gsapAnimation(){
     const tl = gsap.timeline()
@@ -20,7 +40,7 @@ const page = () => {
       display:"block"
     })
     tl.to('.stairing',{
-      delay:0.2,
+      
       stagger:{
        amount: -0.3
       
@@ -46,7 +66,21 @@ const page = () => {
   }
   gsapAnimation()
  },[])
-  
+  function handleScrollExperience(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>){
+   e.preventDefault() 
+    gsap.to(window,{
+      duration:1,
+      scrollTo:"#experience",
+      
+    })
+  }
+   function handleScrollProjects(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>){
+   e.preventDefault() 
+    gsap.to(window,{
+      duration:1.5,
+      scrollTo:"#projects"
+    })
+  }
   return (
     <div className='bg-black mb-4 h-screen w-full'>
 
@@ -68,11 +102,11 @@ const page = () => {
           </div>
           
           <div className='flex gap-2 sm:gap-4 text-[#FAFAFA] font-extralight font-[font2] text-xs sm:text-sm'>
-            <Link href='#experience'>
+            <Link className='experience' onClick={handleScrollExperience} href='#experience'>
               <div className='cursor-pointer'>experience</div>
             </Link>
-            <Link href='#projects'>
-              <div className='cursor-pointer'>projects</div>
+            <Link onClick={handleScrollProjects} href='#projects'>
+              <div  className='cursor-pointer'>projects</div>
             </Link>
           </div>
         </div>

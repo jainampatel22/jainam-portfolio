@@ -1,7 +1,10 @@
 import React from 'react'
 import { MoveLeftIcon, MoveUpRightIcon } from 'lucide-react'
 import Link from 'next/link';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { useGSAP } from '@gsap/react';
+import { ScrollToPlugin } from 'gsap/all';
 const ProjectsCard = () => {
   const projects = [
     {
@@ -59,11 +62,11 @@ const ProjectsCard = () => {
         <h1 className='px-3 sm:px-4 lg:px-5 font-semibold font-[font2] text-sm sm:text-md pt-3 sm:pt-4'>Projects</h1>
       </div>
       
-      <div className="px-3 sm:px-4 -mt-2 pb-4 sm:pb-6">
+      <div className="main  px-3 sm:px-4 -mt-2 pb-4 sm:pb-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="max-h-xl border-1 mt-5 sm:mt-6 lg:mt-7 border-white/15 w-full rounded-xl"
+            className="card max-h-xl border-1 mt-5 sm:mt-6 lg:mt-7 border-white/15 w-full rounded-xl"
           >
             {/* Header */}
             <div className="flex flex-col sm:flex-row font-[font2] text-md gap-3 sm:gap-8 lg:gap-12 items-start justify-between py-3 px-3 sm:px-4 lg:px-6">
