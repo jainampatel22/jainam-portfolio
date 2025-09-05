@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef } from 'react'
 import ProfileCard from './component/ProfileCard'
 
 import { GeistMono } from 'geist/font/mono';
@@ -8,11 +9,58 @@ import SkillsCard from './component/SkillsCard'
 import EducationCard from './component/EducationCard';
 import FooterCard from './component/FooterCard';
 import Link from 'next/link';
+import gsap from 'gsap';
 
 const page = () => {
-  return (
-    <div className='max-h-xl w-full text-white'>
+  const ref = useRef(null)
+ useEffect(()=>{
+  function gsapAnimation(){
+    const tl = gsap.timeline()
+    tl.to('.fullscreennav',{
+      display:"block"
+    })
+    tl.to('.stairing',{
+      delay:0.2,
+      stagger:{
+       amount: -0.3
+      
+      },
+        
+      height:'100%'
+    })
+    tl.to('.stairing',{
+      y:'-100%',
+      stagger:{
+        amount:-0.3
+      }
+    })
+    tl.to('.stair', {
+            y: '0%',
+        })
+    tl.to(ref.current,{
+      opacity:1,
+     
+      ease:'power2.out'
+    })
     
+  }
+  gsapAnimation()
+ },[])
+  
+  return (
+    <div className='bg-black mb-4 h-screen w-full'>
+
+ <div className='fullscreennav absolute hidden bg-black mb-4'>
+      <div className='h-screen w-full fixed '>
+    <div className='h-full w-full flex'>
+    <div className='stairing w-1/3 sm:w-1/5  bg-white h-0'></div>
+    <div className='stairing w-1/3 sm:w-1/5 bg-white h-0' ></div>
+    <div className='stairing w-1/3 sm:w-1/5 bg-white h-0'></div>
+    <div className='stairing hidden sm:block w-1/3 sm:w-1/5 bg-white h-0'></div>
+    <div className='stairing hidden sm:block w-1/3 sm:w-1/5 bg-white h-0' ></div>
+    </div>
+      </div>
+<div ref={ref} className='bg-black navlink opacity-0 max-h-xl w-full text-white mb-8 relative'>
       <div className='px-4 sm:px-8 md:px-16 lg:px-[31%] p-8'>
         <div className='flex justify-between items-center'>
           <div className='font-[font2] mt-0.5 font-semibold text-sm cursor-pointer'>
@@ -71,11 +119,15 @@ const page = () => {
         </div>
 
 
-        <div className='px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-7 lg:px-14 lg:py-8'>
+        <div className=' not-[]:px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-7 lg:px-14 lg:py-8'>
           <FooterCard/>
         </div>
       </div>
     </div>
+    </div>
+    </div>
+   
+    
   )
 }
 
