@@ -1,5 +1,5 @@
 import React from 'react'
-
+import GhActivityCard from '@/components/GhActivityCard'
 const StatsCard = () => {
   return (
     <div className='max-h-xl border-1 border-white/15 w-full rounded-xl'>
@@ -11,11 +11,13 @@ const StatsCard = () => {
   <h1 className="mb-4 font-semibold font-[font2] text-base sm:text-lg md:text-xl text-white/50">
     Monthly
   </h1>
-  <img
+  {/* <img
     className="object-contain w-full max-w-4xl "
     src="https://github-readme-activity-graph.vercel.app/graph?username=jainampatel22&theme=merko"
     alt="GitHub contribution chart"
-  />
+  /> */}
+  
+      <GhActivityCard username="jainampatel22" />
 </div>
 
 

@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "geist": "^1.4.2",
+    "gh-activity-card": "^1.0.3",
     "gsap": "^3.13.0",
     "lucide-react": "^0.542.0",
     "motion": "^12.23.12",
