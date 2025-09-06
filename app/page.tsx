@@ -13,7 +13,7 @@ import gsap from 'gsap';
 import {  ScrollToPlugin ,ScrollTrigger} from 'gsap/all';
 import Lenis from "@studio-freight/lenis";
 
-const page = () => {
+const Page = () => {
   const ref = useRef(null)
   gsap.registerPlugin(ScrollToPlugin)
 
@@ -165,4 +165,4 @@ requestAnimationFrame(raf)
   )
 }
 
-export default page
+export default Page

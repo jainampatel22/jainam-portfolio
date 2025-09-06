@@ -14,7 +14,7 @@ const WorkCard = () => {
           <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 items-start py-3 sm:py-4 px-3 sm:px-4'>
             <div className='flex gap-3 sm:gap-4 items-center'>
               <div className='bg-[#0A0A0A] w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/15 flex-shrink-0'></div>
-              <div className='text-sm sm:text-[16px] font-[font2] font-semibold capitalize'>Freelancing</div>
+              <div className='text-sm sm:text-[16px] font-[font2] -mt-1 font-semibold capitalize'>Freelancing</div>
             </div>
             
             <div className='text-xs sm:text-sm  mb-2  sm:mb-0 sm:mt-0 font-[font2] px-2 sm:px-3 ml-0 sm:ml-14 py-1 bg-[#171717] border border-white/15 rounded-full self-start'>
