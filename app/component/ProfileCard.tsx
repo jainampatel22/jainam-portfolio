@@ -24,9 +24,9 @@ getAPPInfo()
             <div className='text-sm font-[font2] text-[#656565] px-2 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
                 <div className='mt-1 sm:mt-2 flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-0'>
                 <h1 className='text-sm sm:text-base'>hi there 😊, I&apos;m</h1>
-            <div className={`${appName ? ' flex justify-between items-end gap-2 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-1 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-24 px-2 sm:px-0 sm:w-auto`}>
+            <div className={`${appName ? ' flex justify-between items-end gap-2 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-1 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-28 px-2 sm:px-0 sm:w-auto`}>
     {appName && (
-        <div className='text-white/80  whitespace-nowrap font-medium text-xs sm:text-sm lg:text-base'>
+        <div className='text-white/40  whitespace-nowrap font-medium text-xs sm:text-sm lg:text-base'>
             Working on
         </div>
     )}
@@ -42,7 +42,7 @@ getAPPInfo()
                 <div className='w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-gray-500/60'></div>
             )}
         </div>
-        <span className={`font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap ${appName ? 'text-white truncate max-w-12 sm:max-w-16 lg:max-w-24' : '-mt-14 sm:mt-0 text-gray-400'}`}>
+        <span className={`font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap ${appName ? 'text-white/40 truncate max-w-12 sm:max-w-16 lg:max-w-24' : '-mt-14 sm:mt-0 text-gray-400'}`}>
             {appName.split(" ")[0] || 'Offline'}
         </span>
     </div>

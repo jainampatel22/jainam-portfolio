@@ -58,9 +58,9 @@ const ProjectsCard = () => {
 
   return (
     <div  className='max-h-xl border-1 border-white/15 w-full rounded-xl'>
-      <div>
-        <h1 className='px-3 sm:px-4 lg:px-5 font-semibold font-[font2] text-sm sm:text-md pt-3 sm:pt-4'>Projects</h1>
-      </div>
+       <h1 className="px-4 sm:px-6 font-semibold font-[font2] text-base sm:text-lg md:text-xl pt-4 text-white">
+          Projects.
+        </h1>
       
       <div className="main  px-3 sm:px-4 -mt-2 pb-4 sm:pb-6">
         {projects.map((project, index) => (

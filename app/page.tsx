@@ -12,6 +12,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import {  ScrollToPlugin ,ScrollTrigger} from 'gsap/all';
 import Lenis from "@studio-freight/lenis";
+import StatsCard from './component/StatsCard';
 
 const Page = () => {
   const ref = useRef(null)
@@ -152,8 +153,14 @@ requestAnimationFrame(raf)
           <EducationCard/>
         </div>
 
+        <div className='px-6 py-3 sm:px-8 sm:py-3 md:px-12 md:py-4 lg:px-14 lg:py-4'>
+         <StatsCard/>
+        </div>
 
-        <div className=' not-[]:px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-7 lg:px-14 lg:py-8'>
+
+
+
+        <div className=' px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-7 lg:px-14 lg:py-8'>
           <FooterCard/>
         </div>
       </div>

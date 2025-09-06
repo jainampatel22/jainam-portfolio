@@ -3,9 +3,9 @@ import React from 'react'
 const EducationCard = () => {
   return (
     <div className='max-h-xl border-1  border-white/15 w-full rounded-xl'>
-                 <div>
-                    <h1 className='px-5 font-semibold font-[font2] text-md pt-4 '>Education.</h1>
-                </div>
+                  <h1 className="px-4 sm:px-6 font-semibold font-[font2] text-base sm:text-lg md:text-xl pt-4 text-white">
+          Education.
+        </h1>
                 <div className='px-4 -mt-2 pb-6'>
              <div className='h-24 border-1 mt-7 border-white/15 w-full rounded-xl'>
           <div className='flex  gap-32 items-start py-5 px-7'>
