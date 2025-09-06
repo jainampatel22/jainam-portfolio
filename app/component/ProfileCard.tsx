@@ -10,7 +10,7 @@ const ProfileCard = () => {
     const [elapsedSeconds, setElapsedSeconds] = useState<string>("00:00:00");
         useEffect(()=>{
         const getAPPInfo=async()=>{
-            const res = await axios.get('https://ackground-app-tracker.onrender.com/track')
+            const res = await axios.get('https://background-app-tracker.onrender.com/track')
             console.log(res.data)
             setAppName(res.data.activeApp)
             setAppIconUrl(res.data.icon)
