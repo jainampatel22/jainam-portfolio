@@ -19,9 +19,9 @@ const Page = () => {
 
   useEffect(()=>{
     const lenis = new Lenis({
-      duration: 3.5,     // 👈 longer duration = slower response
-    lerp: 0.05,        // 👈 small lerp keeps it smooth
-    wheelMultiplier: 0.6, // 👈 reduces scroll wheel speed
+      duration: 3.5,     
+    lerp: 0.05,      
+    wheelMultiplier: 0.6, 
     touchMultiplier: 0.6,
 
     })
