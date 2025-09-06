@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import ProfileCard from './component/ProfileCard'
 
-import { GeistMono } from 'geist/font/mono';
+
 import WorkCard from './component/WorkCard';
 import ProjectsCard from './component/ProjectsCard';
 import SkillsCard from './component/SkillsCard'

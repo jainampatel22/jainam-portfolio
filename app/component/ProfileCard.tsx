@@ -6,46 +6,92 @@ import { Button } from '@/components/ui/button'
 const ProfileCard = () => {
     const [appName, setAppName] = useState('')
     const [AppIconUrl, setAppIconUrl] = useState('')
-   
- useEffect(()=>{
-   const getAPPInfo=async()=>{
-    const res = await axios.get('https://background-app-tracker.onrender.com/track')
-    console.log(res.data)
-    setAppName(res.data.activeApp)
-       setAppIconUrl(res.data.icon)
-   }  
-getAPPInfo()
-},[])
+     const [startTime, setStartTime] = useState(null);
+    const [elapsedSeconds, setElapsedSeconds] = useState<string>("00:00:00");
+        useEffect(()=>{
+        const getAPPInfo=async()=>{
+            const res = await axios.get('https://background-app-tracker.onrender.com/track')
+            console.log(res.data)
+            setAppName(res.data.activeApp)
+            setAppIconUrl(res.data.icon)
+            setStartTime(res.data.startTime || Date.now());
+        }  
+        getAPPInfo()
+       
+        },[])
 
+  useEffect(() => {
+    function formatHHMMSS(ms: number) {
+      const totalSeconds = Math.floor(ms / 1000);
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, "0");
+      const minutes = String(
+        Math.floor((totalSeconds % 3600) / 60)
+      ).padStart(2, "0");
+      const seconds = String(totalSeconds % 60).padStart(2, "0");
+      return `${hours}:${minutes}:${seconds}`;
+    }
 
+    const interval = setInterval(() => {
+     if(startTime){
+         const formattedTime = formatHHMMSS(Date.now() - startTime);
+      setElapsedSeconds(formattedTime);
+     }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [startTime]);
    
     return (
 <div className='h-auto min-h-44 sm:min-h-48 lg:h-64 border-1 border-white/15 w-full rounded-xl'>
             <div className='text-sm font-[font2] text-[#656565] px-2 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
                 <div className='mt-1 sm:mt-2 flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-0'>
                 <h1 className='text-sm sm:text-base'>hi there 😊, I&apos;m</h1>
-            <div className={`${appName ? ' flex justify-between items-end gap-2 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-1 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-28 px-2 sm:px-0 sm:w-auto`}>
+     
+        <div className={`${appName ? 'flex flex-col border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1 sm:py-1.5 lg:py-0.5 -mt-2 px-2 sm:px-2 lg:px-3 rounded-lg sm:rounded-xl lg:rounded-2xl ${appName ? '' : 'flex justify-center'} ml-28 sm:ml-36 sm:w-auto`}>
+    
+    {/* First line: Working on + app info */}
+    <div className={`flex ${appName ? 'justify-between items-center gap-1.5' : 'justify-center'}`}>
+        {appName && (
+            <div className='text-white/40 whitespace-nowrap font-medium text-xs sm:text-sm lg:text-base'>
+                Working on
+            </div>
+        )}
+        <div className='flex gap-1 sm:gap-1.5 lg:gap-2 items-center'>
+            <div className={appName?`w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 rounded-sm sm:rounded-md lg:rounded-lg overflow-hidden flex-shrink-0 bg-white/10 flex items-center justify-center`:'ml-36 -mt-14 sm:mt-0'}>
+                {appName ? (
+                    <img 
+                        src={`data:image/jpeg;base64,${AppIconUrl}`} 
+                        className='w-full h-full object-cover rounded-sm sm:rounded-md lg:rounded-lg' 
+                        alt={`${appName} icon`} 
+                    />
+                ) : (
+                    <div className='w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-gray-500/60'></div>
+                )}
+            </div>
+            <span className={`font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap ${appName ? 'text-white/40 truncate max-w-12 sm:max-w-16 lg:max-w-24' : '-mt-14 sm:mt-0 text-gray-400'}`}>
+                {appName.split(" ")[0] || 'Offline'}
+            </span>
+        </div>
+    </div>
+
+    {/* Second line: Timer */}
     {appName && (
-        <div className='text-white/40  whitespace-nowrap font-medium text-xs sm:text-sm lg:text-base'>
-            Working on
+        <div className=" text-white/50 text-xs sm:text-sm lg:text-base text-center mt-0.5 ">
+            {elapsedSeconds}
         </div>
     )}
-    <div className='flex gap-1 sm:gap-1.5 lg:gap-2 items-center'>
-        <div className={appName?`w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 rounded-sm sm:rounded-md lg:rounded-lg overflow-hidden flex-shrink-0 bg-white/10 flex items-center justify-center`:'ml-36 -mt-14 sm:mt-0'}>
-            {appName ? (
-                <img 
-                    src={`data:image/jpeg;base64,${AppIconUrl}`} 
-                    className='w-full h-full object-cover rounded-sm sm:rounded-md lg:rounded-lg' 
-                    alt={`${appName} icon`} 
-                />
-            ) : (
-                <div className='w-2 h-2 sm:w-3 sm:h-3 lg:w-5 lg:h-5 rounded-full bg-gray-500/60'></div>
-            )}
-        </div>
-        <span className={`font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap ${appName ? 'text-white/40 truncate max-w-12 sm:max-w-16 lg:max-w-24' : '-mt-14 sm:mt-0 text-gray-400'}`}>
-            {appName.split(" ")[0] || 'Offline'}
-        </span>
-    </div>
+</div>
+
+
+
+       
+              
+        
+
+
+
+<div>
+    
 </div>
                 </div>
               
