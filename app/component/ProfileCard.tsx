@@ -24,7 +24,7 @@ getAPPInfo()
             <div className='text-sm font-[font2] text-[#656565] px-2 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
                 <div className='mt-1 sm:mt-2 flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-0'>
                 <h1 className='text-sm sm:text-base'>hi there 😊, I&apos;m</h1>
-            <div className={`${appName ? ' flex justify-end items-end gap-3 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-3 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-14 px-4 sm:w-auto`}>
+            <div className={`${appName ? ' flex justify-between items-end gap-3 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-3 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-20 px-4 sm:w-auto`}>
     {appName && (
         <div className='text-white/80  font-medium text-xs sm:text-sm lg:text-base'>
             Working on
