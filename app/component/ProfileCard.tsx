@@ -21,10 +21,10 @@ getAPPInfo()
    
     return (
 <div className='h-auto min-h-44 sm:min-h-48 lg:h-64 border-1 border-white/15 w-full rounded-xl'>
-            <div className='text-sm font-[font2] text-[#656565] px-2 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
+            <div className='text-sm font-[font2] text-[#656565] px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
                 <div className='mt-1 sm:mt-2 flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-0'>
                 <h1 className='text-sm sm:text-base'>hi there 😊, I&apos;m</h1>
-            <div className={`${appName ? ' flex justify-between items-end gap-2 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-3 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-16 px-4 sm:w-auto`}>
+            <div className={`${appName ? ' flex justify-between items-end gap-2 border-white/25 border bg-white/5 backdrop-blur-sm' : ''} py-1.5  sm:py-2 sm:px-3 lg:py-2.5 lg:px-4 rounded-lg sm:rounded-xl lg:rounded-2xl flex  sm:gap-2 lg:gap-3 ${appName ? 'justify-between' : 'justify-center'} ml-20 px-3 sm:w-auto`}>
     {appName && (
         <div className='text-white/80  whitespace-nowrap font-medium text-xs sm:text-sm lg:text-base'>
             Working on
@@ -50,7 +50,7 @@ getAPPInfo()
                 </div>
               
             </div>
-            <div className='flex justify-start gap-2 sm:gap-3 items-start px-2 sm:px-4'>
+            <div className='flex justify-start gap-2 sm:gap-3 items-start px-3 sm:px-4'>
                 <div className='bg-[#262626] w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full flex-shrink-0'>
                     <div className='flex font-bold cursor-pointer justify-center items-center h-full text-sm sm:text-base lg:text-lg font-[font1]'>
                         JP
@@ -58,7 +58,7 @@ getAPPInfo()
                 </div>
                 <h1 className='pt-1.5 sm:pt-2 lg:pt-4 font-[font2] text-xl sm:text-2xl lg:text-3xl font-semibold text-white'>Jainam Patel</h1>
             </div>
-            <div className='flex flex-wrap gap-1.5 sm:gap-2 lg:gap-3 px-2 sm:px-4 lg:px-5 text-xs sm:text-sm font-[font2] text-white/70 pt-2 sm:pt-3'>
+            <div className='flex flex-wrap gap-1.5 sm:gap-2 lg:gap-3 px-3 sm:px-4 lg:px-5 text-xs sm:text-sm font-[font2] text-white/70 pt-2 sm:pt-3'>
                 <div>
                     20, he/him
                 </div>
@@ -70,7 +70,7 @@ getAPPInfo()
                 </div>
             </div>
             
-            <div className='mt-2 sm:mt-3  sm:-mb-5 flex flex-wrap px-2 sm:px-4 lg:px-5 items-start gap-2 sm:gap-3 lg:gap-5 text-xs sm:text-sm font-[font1] pt-2 sm:pt-3 lg:pt-2 pb-3 sm:pb-4'>
+            <div className='mt-2 sm:mt-3  sm:-mb-5 flex flex-wrap px-3 sm:px-4 lg:px-5 items-start gap-2 sm:gap-3 lg:gap-5 text-xs sm:text-sm font-[font1] pt-2 sm:pt-3 lg:pt-2 pb-3 sm:pb-4'>
                 <Button className='bg-white text-[#171717] font-semibold hover:bg-white cursor-pointer px-2.5 py-1.5 sm:px-3 sm:py-2 lg:px-4 lg:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm'>
                     Resume
                 </Button>
