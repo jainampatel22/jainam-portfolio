@@ -13,6 +13,7 @@ import gsap from 'gsap';
 import {  ScrollToPlugin ,ScrollTrigger} from 'gsap/all';
 import Lenis from "@studio-freight/lenis";
 import StatsCard from './component/StatsCard';
+import BackgroundAppCard from './component/BackgroundAppCard';
 
 const Page = () => {
   const ref = useRef(null)
@@ -125,9 +126,13 @@ requestAnimationFrame(raf)
         <div className='px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-9 lg:px-12 lg:py-10'>
           <ProfileCard/>
         </div>
+          <div className='px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-9 lg:px-12 lg:py-10'>
+          <BackgroundAppCard/>
+        </div>
+
 
     
-        <div className='px-6 sm:px-8 md:px-12 lg:px-16 -mt-2'>
+        <div className='px-6 sm:px-8 md:px-12 lg:px-16 -mt-12 sm:-mt-20 '>
           <div className={`font-[font2] text-sm sm:text-md text-[#D4D4D4]`}>
             A 20 year-old developer from India who <span className='bg-[#FEF085] rounded px-1 sm:px-2 text-black'>loves</span> building <span className='bg-[#FEF085] rounded px-1 sm:px-2 text-black'>efficient, scalable, and intuitive</span> applications. Previously worked in freelance projects, I am currently working as a Full Stack Engineer Intern, gaining hands-on experience in building full stack applications. 
           </div>

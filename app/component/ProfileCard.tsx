@@ -8,17 +8,17 @@ const ProfileCard = () => {
     const [AppIconUrl, setAppIconUrl] = useState('')
      const [startTime, setStartTime] = useState(null);
     const [elapsedSeconds, setElapsedSeconds] = useState<string>("00:00:00");
-        useEffect(()=>{
-        const getAPPInfo=async()=>{
-            const res = await axios.get('https://background-app-tracker.onrender.com/track')
-            console.log(res.data)
-            setAppName(res.data.activeApp)
-            setAppIconUrl(res.data.icon)
-            setStartTime(res.data.startTime || Date.now());
-        }  
-        getAPPInfo()
-       
-        },[])
+            useEffect(()=>{
+            const getAPPInfo=async()=>{
+                const res = await axios.get('https://background-app-tracker.onrender.com/track')
+                console.log(res.data)
+                setAppName(res.data.activeApp)
+                setAppIconUrl(res.data.icon)
+                setStartTime(res.data.startTime || Date.now());
+            }  
+            getAPPInfo()
+          
+            },[])
 
   useEffect(() => {
     function formatHHMMSS(ms: number) {
@@ -42,65 +42,27 @@ const ProfileCard = () => {
   }, [startTime]);
    
     return (
-<div className='h-auto min-h-44 sm:min-h-48 lg:h-64 border-1 border-white/15 w-full rounded-xl'>
+<div className='h-auto min-h-44 sm:min-h-44 lg:h-60 border-1 border-white/15 w-full rounded-xl'>
             <div className='text-sm font-[font2] text-[#656565] px-2 py-2 sm:px-4 sm:py-2.5 lg:px-5 lg:py-3'>
                 <div className='mt-1 sm:mt-2 flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-0'>
                 <h1 className='text-sm sm:text-base'>hi there 😊, I&apos;m</h1>
      
-   <div className={`${
-  appName 
-    ? 'flex flex-col border-white/25 border bg-white/5 backdrop-blur-sm' 
-    : 'flex justify-center items-center'
-} py-1 sm:py-1.5 lg:py-0.5 px-2 sm:px-2 lg:px-3 rounded-lg sm:rounded-xl lg:rounded-2xl transition-all duration-200 ${
-  appName 
-    ? 'ml-28 sm:ml-36 -mt-2' 
-    : 'absolute top-7 right-7  sm:top-10 sm:ight-10 m-2 sm:m-3 lg:m-4'
-} w-auto max-w-xs sm:max-w-sm lg:max-w-md`}>
-  
-  {/* First line: Working on + app info */}
-  <div className={`flex ${
-    appName 
-      ? 'justify-between items-center gap-1.5' 
-      : 'justify-center items-center'
-  }`}>
-    {appName && (
-      <div className='text-white/40 whitespace-nowrap font-medium text-xs sm:text-sm lg:text-base'>
-        Working on
-      </div>
-    )}
-    
-    <div className='flex gap-1 sm:gap-1.5 lg:gap-2 items-center'>
-      <div className={
-        appName
-          ? `w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 rounded-sm sm:rounded-md lg:rounded-lg overflow-hidden flex-shrink-0 bg-white/10 flex items-center justify-center`
-          : `w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 rounded-full bg-gray-500/60 flex-shrink-0`
-      }>
-        {appName ? (
-          <img
-            src={`data:image/jpeg;base64,${AppIconUrl}`}
-            className='w-full h-full object-cover rounded-sm sm:rounded-md lg:rounded-lg'
-            alt={`${appName} icon`}
-          />
-        ) : null}
-      </div>
+    <div className="">
+      {appName ? (
+        <>
+         
+        </>
+      ) : (
+        <>
+        <div className='w-auto p-3 rounded-lg  ml-32 -mt-3 sm:mt-0 sm:ml-56  bg-white/5 backdrop-blur-sm border border-white/20 flex items-center gap-2 sm:gap-3'>
+        <div className="w-3 h-3 rounded-full bg-gray-400 animate-pulse" />
+         <span className="text-gray-400 font-medium ">Offline</span>  
+        </div>
       
-      <span className={`font-medium whitespace-nowrap transition-all duration-200 ${
-        appName 
-          ? 'text-white/40 truncate max-w-12 sm:max-w-16 lg:max-w-24 text-xs sm:text-sm lg:text-base' 
-          : 'text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg'
-      }`}>
-        {appName ? appName.split(" ")[0] : 'Offline'}
-      </span>
+        </>
+    
+      )}
     </div>
-  </div>
-
-  {/* Second line: Timer */}
-  {appName && (
-    <div className="text-white/50 text-xs sm:text-sm lg:text-base text-center mt-0.5">
-      {elapsedSeconds}
-    </div>
-  )}
-</div>
 
 
 
