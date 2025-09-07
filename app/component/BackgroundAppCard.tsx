@@ -54,7 +54,7 @@ const BackgroundAppCard = () => {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 w-full">
           {/* Top row: Working on + app info */}
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <div className="text-white/70 mt-4 sm:mt-0 font-semibold text-xs sm:text-base lg:text-lg tracking-wide">
+            <div className="text-white/70 mt-4 ml-6 sm:ml-0 sm:mt-0 font-semibold text-xs sm:text-base lg:text-lg tracking-wide">
               Working on
             </div>
 
